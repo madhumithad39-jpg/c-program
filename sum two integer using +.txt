@@ -1,11 +1,9 @@
-#include <stdio.h>
-
-int main() {
-    char a;
+#include<stdio.h>
+int  main(){
+    int a;
     int b;
-
-    scanf(" %c", &a);
-    b= a;
-    printf("%d", b);
+    scanf("%d%d",&a,&b);
+    int c = a+b;
+    printf("%d",c);
     return 0;
 }
