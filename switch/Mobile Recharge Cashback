@@ -1,0 +1,46 @@
+#include <stdio.h>
+
+int main() {
+    int plan;
+    char pay; 
+    int amount, cashback;
+    scanf("%d", &plan);
+    scanf(" %c", &pay);
+    switch (plan) {
+        case 1:
+            amount = 199;
+            switch (pay) {
+                case 'U': 
+                case 'C': 
+                    cashback = 20;
+                    break;
+                case 'W': 
+                    cashback = 0;
+                    break;
+                default:
+                    cashback = 0;
+            }
+            break;
+        case 2:
+            amount = 399;
+            switch (pay) {
+                case 'U':
+                case 'C':
+                    cashback = 20;
+                    break;
+                case 'W':
+                    cashback = 0;
+                    break;
+                default:
+                    cashback = 0;
+            }
+            break;
+        default:
+            printf("Invalid Plan\n");
+            return 0;
+    }
+
+    printf("Pay %d", amount - cashback);
+
+    return 0;
+}
