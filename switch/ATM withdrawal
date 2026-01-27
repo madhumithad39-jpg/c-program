@@ -1,0 +1,28 @@
+#include<stdio.h>
+int main(){
+    int account,balance;
+    scanf("%d",&account);
+    int wda;
+    scanf("%d%d",&balance,&wda);
+    switch(account){
+        case 1:
+            if(balance>=wda){
+                printf("transaction successfully");
+            }
+            else{
+                printf("insufficient balance");
+            }
+        break;
+        case 2:
+            if(wda<=5000){
+                printf("transaction Successfully");
+            }
+            else{
+                printf("limit exceeded");
+            }
+        break;
+        default:
+            printf("Invalid Account Type");
+    }
+    return 0;
+}
