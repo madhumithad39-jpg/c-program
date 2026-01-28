@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+int main() {
+    int mode;
+    char category;
+
+    scanf("%d", &mode);
+    scanf(" %c", &category); 
+
+    switch(mode) {
+        case 1:
+            switch(category) {
+                case 'r':
+                    printf("5000");
+                    break;
+                case 's':
+                    printf("3000");
+                    break;
+                default:
+                    printf("Invalid category!");
+            }
+            break;
+
+        case 2: 
+            switch(category) {
+                case 'r':
+                    printf("9000");
+                    break;
+                case 's':
+                    printf("7000");
+                    break;
+                default:
+                    printf("Invalid category!");
+            }
+            break;
+
+        default:
+            printf("3000");
+    }
+
+    return 0;
+}
