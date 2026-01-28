@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main() {
+    int code, exp;
+
+    scanf("%d", &code);
+    scanf("%d", &exp);
+
+    switch (code) {
+        case 1:
+            if (exp >= 3)
+                printf("Salary %d", 50000 + exp * 5000);
+            else
+                printf("Salary 50000");
+            break;
+
+        case 2:
+            if (exp>= 3)
+                printf("Salary %d", 35000 + exp* 5000);
+            else
+                printf("Salary 35000");
+            break;
+
+        default:
+            printf("Invalid code");
+    }
+
+    return 0;
+}
