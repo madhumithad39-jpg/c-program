@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main() {
+    int room;
+    char season;
+    
+    scanf("%d", &room);
+    scanf(" %c", &season);
+
+    switch (room) {
+        case 1:
+            switch (season) {
+                case 'p': 
+                    printf("2500");
+                    break;
+                case 'o':
+                    printf("2000");
+                    break;
+            }
+            break;
+
+        case 2:
+            switch (season) {
+                case 'p': 
+                    printf("4000");
+                    break;
+                case 'o':
+                    printf("3000");
+                    break;
+            }
+            break;
+    }
+
+    return 0;
+}
