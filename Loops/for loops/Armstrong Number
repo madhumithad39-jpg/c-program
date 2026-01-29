@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main() {
+    int a, temp, sum = 0;
+    scanf("%d", &a);
+    temp = a;
+    for (; temp > 0; temp /= 10) {
+        int digit = temp % 10;
+        sum += digit * digit * digit;
+    }
+    if (sum == a) {
+        printf("Yes");
+    } else {
+        printf("No");
+    }
+    return 0;
+}
