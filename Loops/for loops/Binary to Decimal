@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+    int n, decimal = 0, power = 1;
+    scanf("%d", &n);
+
+    for (; n > 0; n/= 10) {
+        int lastDigit = n % 10;
+        decimal += lastDigit * power;
+        power *= 2;
+    }
+
+    printf("%d", decimal);
+
+    return 0;
+}
