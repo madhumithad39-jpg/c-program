@@ -1,19 +1,18 @@
-#include <stdio.h>
+#include<stdio.h>
 int main() {
-    int total, n;
-    int usage;
-    int i= 0;
-    scanf("%d", &total);
-    scanf("%d", &n);
-    while (i < n && total > 0) {
-        scanf("%d", &usage);
-        total = total - usage;
+    int n,i=0;
+    int b,t;
+    int low=0;
+    scanf("%d%d",&n,&b);
+    while (i<n) {
+        scanf("%d",&t);
+        b=b+t;
+        if (b<2000) {
+            low++;
+        }
         i++;
     }
-    if (total< 0) {
-        total = 0;
-    }
-    printf("Days Used: %d\n", i);
-    printf("Remaining Data: %dGB\n", total);
-    return 0;
+    printf("Final Balance: %d\n", b);
+    printf("Low Balance Days: %d\n", low);
+return 0;
 }
