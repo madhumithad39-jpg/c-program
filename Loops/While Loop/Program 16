@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    int max, n, w;
+    int total = 0, count = 0;
+    int i=0;
+
+    scanf("%d %d", &max, &n);
+
+    while (i<n) {
+        scanf("%d", &w);
+        if (total + w > max)
+            break;
+        total += w;
+        count++;
+    }
+    printf("People Entered: %d\n", count);
+        if (n >= 0) {
+            printf("Overload Status: Yes");
+        }
+        else {
+            printf("Overload Status: No");
+        }
+
+    return 0;
+}
