@@ -1,0 +1,32 @@
+#include <stdio.h>
+int main() {
+    char name[50];
+    int N, a;
+    int fail=0, cons=0, lock=0;
+    int i=0;
+    scanf("%s", name);   // Read system or user name
+    scanf("%d", &N);
+    while(i < N) {
+        i++;
+        scanf("%d", &a);
+        if(a == 0) {
+            fail++;
+            cons++;
+            if(cons == 3 && !lock) {
+                lock = i;
+            }
+        }
+        else{
+            cons = 0;
+        }
+    }
+    printf("System: %s\n", name);
+    if(lock) {
+        printf("Lock Triggered At Attempt: %d\n", lock);
+    }
+    else {
+        printf("Lock Triggered At Attempt: Not Locked\n");
+    }
+    printf("Total Failed Attempts: %d", fail);
+    return 0;
+}
