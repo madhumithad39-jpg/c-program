@@ -1,0 +1,22 @@
+#include <stdio.h>
+int main() {
+    int n, count;
+    int congestion = 0, streak = 0;
+    int maxStreak = 0;
+    int i = 0;
+    scanf("%d", &n);
+    while(i < n) {
+        scanf("%d", &count);
+        if(count > 20) {
+            congestion++;
+            streak++;
+            if(streak > maxStreak) maxStreak = streak;
+        } else {
+            streak = 0;
+        }
+        i++;
+    }
+    printf("Congestion Minutes: %d\n", congestion);
+    printf("Longest Congestion Streak: %d", maxStreak);
+    return 0;
+}
