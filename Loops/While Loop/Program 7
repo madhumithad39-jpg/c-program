@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main() {
+    int n,n1;
+    int capacity;
+    int i=0;
+    int sum=0;
+    int cp=0;
+    scanf("%d",&capacity);
+    scanf("%d",&n);
+    while (i<n) {
+        scanf("%d",&n1);
+        sum=sum+n1;
+        if (sum>(capacity*90)/100) {
+            cp++;
+        }
+        i++;
+    }
+    printf("Final Occupied Beds:%d\n",sum);
+    printf("Critical Hours:%d\n",cp);
+    return 0;
+}
