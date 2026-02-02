@@ -1,0 +1,27 @@
+#include <stdio.h>
+int main() {
+    int N, vib ;
+    int unsafe = 0, cons = 0, breakdown = 0;
+    int i = 0;
+    scanf("%d", &N);
+    while(i < N) {
+        i++;
+        scanf("%d", &vib);
+        if(vib > 70) {
+            unsafe++;
+            cons++;
+            if(cons == 3 && breakdown == 0)
+                breakdown = i;
+        } else {
+            cons = 0;
+        }
+    }
+    if(breakdown) {
+        printf("Breakdown At Reading: %d\n", breakdown);
+    }
+    else {
+        printf("Breakdown At Reading: Not Occurred\n");
+    }
+    printf("Unsafe Readings: %d", unsafe);
+    return 0;
+}
