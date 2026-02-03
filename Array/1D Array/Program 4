@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main() {
+    int n;
+    int rev[n];
+    scanf("%d",&n);
+    int arr[n];
+    for(int i=0;i<n;i++) {
+        scanf("%d",&arr[i]);
+    }
+    for(int i=0;i<n;i++) {
+        rev[i]=arr[n-1-i];
+    }
+    for(int i=0;i<n;i++) {
+        printf("%d",rev[i]);
+    }
+    return 0;
+}
