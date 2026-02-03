@@ -1,0 +1,21 @@
+#include <stdio.h>
+int main() {
+    int n;
+    int n1;
+    int fuel;
+    int i=1;
+    scanf("%d%d",&n,&fuel);
+    while (i<=n) {
+        scanf("%d",&n1);
+        fuel=fuel-n1;
+         if (fuel<0) {
+             printf("Emergency Stage:%d\n",i);
+             printf("Fuel Wasted: %d\n",-fuel);
+             return 0;
+         }
+        i++;
+    }
+    printf("Emergency Stage : Not Occurred\n");
+    printf("Fuel Wasted:0");
+    return 0;
+}
