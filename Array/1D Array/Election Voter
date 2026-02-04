@@ -16,6 +16,7 @@ int main() {
             m=a[i];
         }
     }
+    printf("%d\n",total);
     printf("%d",m);
     return 0;
 }
