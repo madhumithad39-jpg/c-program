@@ -1,0 +1,25 @@
+#include<stdio.h>
+int main () {
+    int r,c;
+    scanf("%d %d",&r,&c);
+    int count=0;
+    int a[r][c];
+    for (int i=0;i<r;i++) {
+        int ev=0;
+        int od=0;
+        for (int j=0;j<c;j++) {
+            scanf("%d",&a[i][j]);
+            if (a[i][j]%2==0) {
+                ev++;
+            }
+            else {
+                od++;
+            }
+        }
+        if (ev==od) {
+            count++;
+        }
+    }
+    printf("%d",count);
+    return 0;
+}
