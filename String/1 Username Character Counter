@@ -1,0 +1,11 @@
+#include <stdio.h>
+int main() {
+    char user[100];
+    int count =0;
+    scanf("%s", user);
+    for (int i = 0; user[i] != '\0'; i++) {
+        count++;
+    }
+    printf("%d", count);
+    return 0;
+}
