@@ -1,0 +1,14 @@
+#include<stdio.h>
+float Circle(int r) {
+    float area;
+    area=3.14*r*r;
+    return area;
+}
+int main() {
+    int r;
+    float C;
+    scanf("%d",&r);
+    C=Circle(r);
+    printf("%.2f",C);
+    return 0;
+}
