@@ -1,0 +1,13 @@
+#include<stdio.h>
+float c(int p,int r,int t) {
+    float S=(p*r*t)/100;
+    return S;
+}
+int main() {
+    int p,r,t;
+    float interest;
+    scanf("%d %d %d",&p,&r,&t);
+    interest=c(p,r,t);
+    printf("%.2f",interest);
+    return 0;
+}
