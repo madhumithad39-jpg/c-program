@@ -1,0 +1,25 @@
+#include <stdio.h>
+int count(char *ptr) {
+    int count = 1;
+    while (*ptr != '\0') {
+        if (*ptr == ' ') {
+            count++;
+        }
+        ptr++;
+    }
+    return count;
+}
+int main() {
+    char str[200];
+    fgets(str, sizeof(str), stdin);
+    char *p = str;
+    while (*p != '\0') {
+        if (*p == '\n') {
+            *p = '\0';
+            break;
+        }
+        p++;
+    }
+    printf("%d", count(str));
+    return 0;
+}
