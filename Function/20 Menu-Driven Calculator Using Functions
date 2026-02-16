@@ -1,0 +1,38 @@
+#include<stdio.h>
+int add(int a, int b) {
+    return a+b;
+}
+int sub(int a, int b) {
+    return a-b;
+}
+int mul(int a, int b) {
+    return a*b;
+}
+int div(int a, int b) {
+    return a/b;
+}
+int main() {
+    int a,b,number;
+    char ch;
+    scanf("%d%d",&a,&b);
+    scanf("%c",&ch);
+    switch(ch) {
+        case '+':
+            number=add(a,b);
+            break;
+        case '-':
+            number = sub(a,b);
+            break;
+        case'*':
+            number=mul(a,b);
+            break;
+        case '/':
+            number=div(a,b);
+            break;
+        default:
+            printf("invalid");
+            return 0;
+    }
+    printf("%d",number);
+    return 0;
+}
