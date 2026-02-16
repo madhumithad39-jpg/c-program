@@ -1,0 +1,25 @@
+#include <stdio.h>
+int search(int *p, int n, int x) {
+    int position = 1;
+    while (n > 0) {
+        if (*p == x) {
+            return position;
+        }
+        p++;
+        position++;
+        n--;
+    }
+    return -1;
+}
+int main() {
+    int n, x;
+    scanf("%d", &n);
+    int arr[n];
+    int *ptr = arr;
+    for (int i = 0; i < n; i++) {
+        scanf("%d", ptr++);
+    }
+    scanf("%d", &x);
+    printf("%d", search(arr, n, x));
+    return 0;
+}
