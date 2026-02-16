@@ -1,0 +1,21 @@
+#include <stdio.h>
+int Array(int *p, int n) {
+    int sum = 0;
+    for (int i = 0; i < n; i++) {
+        sum += *p;
+        p++;
+    }
+    return sum;
+}
+int main() {
+    int n;
+    scanf("%d", &n);
+    int arr[n];
+    int *p = arr;
+    for (int i = 0; i < n; i++) {
+        scanf("%d", p);
+        p++;
+    }
+    printf("%d", Array(arr, n));
+    return 0;
+}
